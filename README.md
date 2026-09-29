@@ -1,6 +1,6 @@
 # To-Do List Application
 
-This is a simple To-Do List application that helps you manage your tasks. It provides various features to organize and streamline your daily tasks.
+A friendly, fast to-do list built with React. Your tasks are saved in your browser, so they're still there when you come back.
 
 ## Deployed Site
 
@@ -8,29 +8,42 @@ This is a simple To-Do List application that helps you manage your tasks. It pro
 
 ## Features
 
-### Adding To-Dos
-- You can easily add new tasks to your to-do list by typing them into the input field and clicking "+" button.
+### Tasks
+- **Add tasks** by typing and pressing <kbd>Enter</kbd> (or clicking **+**).
+- **Priorities**: None, Low, Medium, High. High-priority tasks show up in the **Urgent** view, and each task has a coloured priority stripe.
+- **Due dates** with friendly labels (Today, Tomorrow, Friday, …). Overdue tasks are highlighted.
+- **Categories**: tag tasks (e.g. Home, School) and filter by category. Existing categories are suggested as you type.
+- **Subtasks**: break a task into a checklist with its own progress bar.
+- **Inline editing**: double-click a task (or use the ✏️ button) to change its text, priority, due date or category. <kbd>Esc</kbd> cancels.
+- **Mark as done / undo**: click the circle to toggle a task.
 
-### Urgent To-Dos
-- Mark a task as "Urgent" to prioritize it. Urgent tasks will appear at the top of the to-do list, making them easy to find and complete.
+### Organising
+- **Views**: All, Active, Today, Overdue, Urgent and Done, each with a live count.
+- **Search** across task text, categories and subtasks, with matches highlighted.
+- **Sorting**: your own order, due date, priority, newest or A → Z. Completed tasks always sink to the bottom.
+- **Drag and drop** tasks to reorder them (when sorting by "My order").
 
-### Filtering To-Dos
-- Use the "Show Urgent" button to display only urgent tasks, helping you focus on critical items.
-- The "Show All" button allows you to view all tasks, whether urgent or not.
+### Bulk actions & safety
+- **Complete all** visible tasks, **Clear completed**, or **Reset** the whole list.
+- **Undo**: deletes, clears, resets and imports can all be undone from the pop-up.
 
-### Marking as Completed
-- When you've finished a task, simply click on "Done" to mark it as completed. A strikethrough will appear to indicate that the task is done.
+### Everything else
+- **Progress ring** showing how much of your list is done.
+- **Saved automatically** in `localStorage`, and kept in sync across open tabs.
+- **Dark mode** that follows your system setting and can be toggled.
+- **Export / Import** your tasks as a JSON file (for backups or moving between browsers).
+- **Keyboard shortcuts**: <kbd>N</kbd> focuses the new-task box, <kbd>/</kbd> focuses search.
+- **Responsive** layout that works on phones.
 
-### Clear Completed Tasks
-- If you want to declutter your list and remove completed tasks, click the "Clear Completed" button.
+## Getting Started
 
-### Individual Task Actions
-- Each task has a "Remove" button, allowing you to delete a task individually when it's no longer needed.
-
-### Reset All Tasks
-- The "Reset" button allows you to remove all tasks from your list, giving you a fresh start.
+```bash
+yarn install
+yarn start      # run the dev server at http://localhost:3000
+yarn test       # run the test suite
+yarn build      # production build in ./build
+```
 
 ## Screenshot
 
 ![To-Do List Screenshot](screenshot.png)
-
